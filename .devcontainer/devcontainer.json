@@ -1,0 +1,7 @@
+{
+  "name": "typescript-dev-container",
+  "build": {
+    "dockerfile": "../Dockerfile"
+  },
+  "postCreateCommand": "corepack enable && corepack prepare pnpm@latest --activate"
+}

@@ -1,0 +1,52 @@
+{
+  "name": "dev-container-typescript-node",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsx src/hello.ts",
+    "lint": "eslint . --ext .ts --report-unused-disable-directives",
+    "lint:fix": "eslint . --ext .ts --fix",
+    "lint:format": "prettier . --check --ignore-unknown",
+    "lint:format-fix": "prettier . --write --ignore-unknown --cache",
+    "lint:spellcheck": "cspell '**/*' --cache",
+    "lint:type-check": "sh -c 'tsc --noEmit --project tsconfig.json'",
+    "test": "vitest",
+    "test:watch": "vitest --watch",
+    "test:ui": "vitest --ui",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "*": [
+      "pnpm lint:format-fix",
+      "pnpm lint:spellcheck",
+      "pnpm lint:fix",
+      "pnpm lint:type-check"
+    ]
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.13.1",
+  "devDependencies": {
+    "@eslint/js": "^9.31.0",
+    "@types/jest": "^30.0.0",
+    "@typescript-eslint/eslint-plugin": "^8.38.0",
+    "@typescript-eslint/parser": "^8.38.0",
+    "@vitest/coverage-v8": "^3.2.4",
+    "@vitest/runner": "^3.2.4",
+    "@vitest/ui": "^3.2.4",
+    "cspell": "^9.2.0",
+    "eslint": "^9.31.0",
+    "husky": "^9.1.7",
+    "jest": "^30.0.4",
+    "lint-staged": "^16.1.2",
+    "prettier": "^3.6.2",
+    "ts-jest": "^29.4.0",
+    "tsx": "^4.20.3",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.38.0",
+    "vitest": "^3.2.4"
+  }
+}

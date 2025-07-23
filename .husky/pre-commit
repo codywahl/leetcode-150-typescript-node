@@ -1,0 +1,6 @@
+echo "\n--------------- Running Pre-commit Hook ---------------\n"
+
+pnpm exec lint-staged
+pnpm test
+
+echo "\n--------------- Pre-commit Hook Complete ---------------\n"

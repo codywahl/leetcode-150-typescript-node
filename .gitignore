@@ -1,0 +1,24 @@
+# Node
+node_modules/
+.pnpm-store/
+
+# VS Code
+.vscode/
+
+# TypeScript
+dist/
+build/
+*.tsbuildinfo
+
+# Logs
+*.log
+
+# Coverage and testing
+coverage/
+
+# Dev container + system stuff
+.devcontainer/.env
+.DS_Store
+
+# Others
+.cspellcache
