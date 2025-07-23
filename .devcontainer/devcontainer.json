@@ -3,5 +3,16 @@
   "build": {
     "dockerfile": "../Dockerfile"
   },
-  "postCreateCommand": "corepack enable && corepack prepare pnpm@latest --activate"
+  "postCreateCommand": "corepack enable && corepack prepare pnpm@latest --activate",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "streetsidesoftware.code-spell-checker", // cspell
+        "github.vscode-github-actions", // GitHub Actions
+        "esbenp.prettier-vscode", // Prettier
+        "dbaeumer.vscode-eslint", // ESLint
+        "vitest.explorer" // Vitest Explorer
+      ]
+    }
+  }
 }
