@@ -23,7 +23,8 @@
       "pnpm lint:format-fix",
       "pnpm lint:spellcheck",
       "pnpm lint:fix",
-      "pnpm lint:type-check"
+      "pnpm lint:type-check",
+      "pnpm test:related"
     ]
   },
   "keywords": [],
