@@ -15,6 +15,20 @@ describe("hIndexSorting", () => {
     const result = hIndexSorting(input);
     expect(result).toEqual(expected);
   });
+
+  it("should return 1 for example 3", () => {
+    const input = [100];
+    const expected = 1;
+    const result = hIndexSorting(input);
+    expect(result).toEqual(expected);
+  });
+
+  it("should return 4 for example 4", () => {
+    const input = [6, 6, 4, 8, 4, 3, 3, 10];
+    const expected = 4;
+    const result = hIndexSorting(input);
+    expect(result).toEqual(expected);
+  });
 });
 
 describe("hIndexCountingSort", () => {

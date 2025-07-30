@@ -1,21 +1,20 @@
 // https://leetcode.com/problems/h-index/description/?envType=study-plan-v2&envId=top-interview-150
 
 export function hIndexSorting(citations: number[]): number {
-  citations.sort();
+  citations.sort((a, b) => a - b);
   let maxHIndex = citations.length;
-  const minHIndex = citations[0];
 
   for (let i = 0; i < citations.length; i++) {
     const currentCitationsCount = citations[i];
 
-    if (currentCitationsCount == maxHIndex) {
+    if (currentCitationsCount >= maxHIndex) {
       return maxHIndex;
     } else {
       maxHIndex--;
     }
   }
 
-  return Math.max(minHIndex, maxHIndex);
+  return maxHIndex;
 }
 
 export function hIndexCountingSort(citations: number[]): number {
